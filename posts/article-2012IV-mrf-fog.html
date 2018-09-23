@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Markov Random Field Model for Single Image Defogging - Laurent Caraffa</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="../posts/article-2012IV-mrf-fog.html">
+
+        <meta name="author" content="Laurent Caraffa" />
+        <meta name="keywords" content="Fog,MRF,Computer Science,Publication,Bad Weather" />
+        <meta name="description" content="Abstract Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. Each year, this causes traffic accidents. Fog is caused by a high concentration of very fine water droplets in the air. When light hits these droplets, it is scattered and this results in a dense white …" />
+
+        <meta property="og:site_name" content="Laurent Caraffa" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Markov Random Field Model for Single Image Defogging"/>
+        <meta property="og:url" content="../posts/article-2012IV-mrf-fog.html"/>
+        <meta property="og:description" content="Abstract Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. Each year, this causes traffic accidents. Fog is caused by a high concentration of very fine water droplets in the air. When light hits these droplets, it is scattered and this results in a dense white …"/>
+        <meta property="article:published_time" content="2013-11-11" />
+            <meta property="article:section" content="Computer science" />
+            <meta property="article:tag" content="Fog" />
+            <meta property="article:tag" content="MRF" />
+            <meta property="article:tag" content="Computer Science" />
+            <meta property="article:tag" content="Publication" />
+            <meta property="article:tag" content="Bad Weather" />
+            <meta property="article:author" content="Laurent Caraffa" />
+
+	    
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">
+Laurent Caraffa            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://lcaraffa.github.io/blog//category/blog_index.html">Blog</a></li>
+                    <li><a href="https://lcaraffa.github.io/blog//tag/publication.html">Publications</a></li>
+                    <li><a href="https://lcaraffa.github.io/blog//tag/source-code.html">Source code</a></li>
+                        <li class="active">
+                            <a href="../category/computer-science.html">Computer science</a>
+                        </li>
+                        <li >
+                            <a href="../category/digital-art.html">Digital art</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("../banner.jpg");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<!-- <div class="copy"> -->
+		<!-- 	<h1>Laurent Caraffa</h1> -->
+		<!-- 	 -->
+		<!-- 		<p class="intro">Home page</p> -->
+		<!-- 	 -->
+		<!-- </div> -->
+	</div>
+</div><!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="../posts/article-2012IV-mrf-fog.html"
+                       rel="bookmark"
+                       title="Permalink to Markov Random Field Model for Single Image Defogging">
+                        Markov Random Field Model for Single Image Defogging
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2013-11-11T00:00:00+01:00"> lun. 11 novembre 2013</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="../tag/fog.html">Fog</a>
+        /
+	<a href="../tag/mrf.html">MRF</a>
+        /
+	<a href="../tag/computer-science.html">Computer Science</a>
+        /
+	<a href="../tag/publication.html">Publication</a>
+        /
+	<a href="../tag/bad-weather.html">Bad Weather</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                
+<div class="figure">
+<p><img src="../article-2012IV-mrf-fog/logo.png" alt="logo.png" />
+</p>
+</div>
+
+<div id="outline-container-org5a4eccd" class="outline-2">
+<h2 id="org5a4eccd"></h2>
+<div class="outline-text-2" id="text-org5a4eccd">
+</div><div id="outline-container-org8f5d5ae" class="outline-4">
+<h4 id="org8f5d5ae">Abstract</h4>
+<div class="outline-text-4" id="text-org8f5d5ae">
+<p>
+Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. Each year, this causes traffic accidents. Fog is caused by a high concentration of very fine water droplets in the air. When light hits these droplets, it is scattered and this results in a dense white background, called the atmospheric veil. As pointed in <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, Advanced Driver Assistance Systems (ADAS) based on the display of defogged images from a camera may help the driver by improving objects visibility in the image and thus may leads to a decrease of fatality and injury rates. In the last few years, the problem of single image defogging has attracted attention in the image processing community. Being an ill-posed problem, several methods have been proposed. However, a few among of these methods are dedicated to the processing of road images. One of the first exception is the method in <sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, <sup><a id="fnr.1.100" class="footref" href="#fn.1">1</a></sup> where a planar constraint is introduced to improve the restoration of the road area, assuming an approximately flat road. The single image defogging problem being ill-posed, the choice of the Bayesian approach seems adequate to set this problem as an inference problem. A first Markov Random Field (MRF) approach of the problem has been proposed recently in <sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>. However, this method is not dedicated to road images. In this paper, we propose a novel MRF model of the single image defogging problem which applies to all kinds of images but can also easily be refined to obtain better results on road images using the planar constraint. A comparative study and quantitative evaluation with several state-of-the-art algorithms is presented. This evaluation demonstrates that the proposed MRF model allows to derive a new algorithm which produces better quality results, in particular in case of a noisy input image.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc3f47ae" class="outline-4">
+<h4 id="orgc3f47ae">PDF</h4>
+<div class="outline-text-4" id="text-orgc3f47ae">
+<p>
+<a href="http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-iv13.pdf">http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-iv13.pdf</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a28a83" class="outline-4">
+<h4 id="org3a28a83">Bibtex</h4>
+<div class="outline-text-4" id="text-org3a28a83">
+<div class="org-src-container">
+<pre class="src src-HTML">@inproceedings{jpt-iv13, 
+		   author    = {Caraffa, L. and Tarel, J.-P.}, 
+		   title     = {Markov Random Field Model for Single Image Defogging},
+		   booktitle = {Proceedings of IEEE Intelligent Vehicle Symposium (IV'2013)}, 
+		   date      = {June 23-26},
+		   address   = {Gold Coast, Australia},
+		   year      = {2013},
+		   pages     = {994-999},
+		   note      = {http://perso.lcpc.fr/tarel.jean-philippe/publis/iv13.html}
+	       }
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h4 class="footnotes">Footnotes: </h4>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Tarel, J. P., Hautiere, N., Caraffa, L., Cord, A., Halmaoui, H., &amp; Gruyer, D. (2012). Vision enhancement in homogeneous and heterogeneous fog. IEEE Intelligent Transportation Systems Magazine, 4(2), 6-20.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Tarel, J. P., Hautiere, N., Cord, A., Gruyer, D., &amp; Halmaoui, H. (2010, June). Improved visibility of road scene images under heterogeneous fog. In Intelligent Vehicles Symposium (IV), 2010 IEEE (pp. 478-485). IEEE.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+Nishino, K., Kratz, L., &amp; Lombardi, S. (2012). Bayesian defogging. International journal of computer vision, 98(3), 263-278.
+</p></div></div>
+
+
+</div>
+</div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+
+  <p>
+    <img width="100%" class="img-thumbnail" src="./avatar.jpg" onerror="if (this.src != 'https://lcaraffa.github.io/blog//avatar2.jpg') this.src = 'https://lcaraffa.github.io/blog//avatar2.jpg';"/>
+        </p>
+    <p>
+        <strong>About Laurent Caraffa</strong><br/>
+        <font size="2">  I'm researcher in computer science at <a href="http://recherche.ign.fr/labos/matis/accueilMATIS.php">IGN</a>, Paris. Here you can find some information about my work and other area of interest.  <br> <b> Contact </b> <br>  mail : laurent.caraffa[at]ign.fr </font>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://www.flickr.com/photos/112418160@N03/"><i class="fa fa-flickr fa-lg"></i> Flickr</a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/laurentcaraffa"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+              </ul>
+            </li>
+
+
+
+            <li class="list-group-item"><a href="../tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group " id="tags">
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/publication.html">
+                            Publication
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/optimization.html">
+                            Optimization
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/computer-science.html">
+                            Computer science
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/photography.html">
+                            Photography
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/bad-weather.html">
+                            Bad Weather
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/graph-cut.html">
+                            Graph-cut
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/fog.html">
+                            Fog
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/qpbo.html">
+                            QPBO
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/photogrammetry.html">
+                            Photogrammetry
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/visibility-distance.html">
+                            Visibility distance
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/alpha-expansion.html">
+                            Alpha-expansion
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/lidar.html">
+                            Lidar
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/stereo-vision.html">
+                            Stereo vision
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/micmac.html">
+                            Micmac
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/blender.html">
+                            Blender
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="https://scholar.google.fr/citations?user=N0YTGr8AAAAJ&hl=fr" target="_blank">
+                Google Scholar
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">; 2016 Laurent Caraffa
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,
+	    <a href="http://orgmode.org/" target="_blank">Orgmode</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+    <script src="../theme/js/jquery.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="../theme/js/respond.min.js"></script>
+    
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="../theme/js/bodypadding.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-16886766-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+</body>
+</html>

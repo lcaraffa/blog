@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Laurent Caraffa - Laurent Caraffa</title><link>http://lcaraffa.net/</link><description></description><lastBuildDate>Fri, 18 Nov 2016 00:00:00 +0100</lastBuildDate><item><title>3D watertight mesh generation with uncertainties from ubiquitous data</title><link>http://lcaraffa.net/posts/article-2016ACCV-wasure.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2016ACCV-wasure/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org48ffaee" class="outline-2"&gt;
+&lt;h2 id="org48ffaee"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org48ffaee"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org7c7d19b" class="outline-4"&gt;
+&lt;h4 id="org7c7d19b"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7c7d19b"&gt;
+&lt;p&gt;
+In this paper, we propose a generic framework for watertight mesh generation with uncertainties that provides a confidence measure on each reconstructed mesh triangle. Its input is a set of vision-based or Lidar-based 3D measurements which are converted to a set of mass functions that characterize the level of …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Fri, 18 Nov 2016 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2016-11-18:/posts/article-2016ACCV-wasure.html</guid><category>Surface reconstruction</category><category>Optimization</category><category>Lidar</category><category>Publication</category></item><item><title>Augmented reality with MicMac and Blender</title><link>http://lcaraffa.net/posts/note-augmented-reality-blender.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-augmented-reality-blender/logo.jpg" alt="logo.jpg" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4e67d5d" class="outline-2"&gt;
+&lt;h2 id="org4e67d5d"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4e67d5d"&gt;
+&lt;p&gt;
+The structure from motion is processed with MimMac. The render with Blender. 
+&lt;/p&gt;
+
+&lt;object style="border: medium none; overflow: hidden; width: 420px; height: 315px;" data="//www.youtube.com/embed/ePcB6zOxWdc?rel=0"&gt;                     
+&lt;/object&gt;   
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-orge166d78" class="outline-4"&gt;
+&lt;h4 id="orge166d78"&gt;Softs :&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge166d78"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="http://logiciels.ign.fr/?Micmac"&gt;MicMAc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.blender.org/"&gt;Blender&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Thu, 05 May 2016 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2016-05-05:/posts/note-augmented-reality-blender.html</guid><category>Computer science</category><category>Micmac</category><category>3D</category><category>3D rendering</category><category>Blender</category></item><item><title>Second order MRF with QPBO Optimization</title><link>http://lcaraffa.net/posts/note-fusion-move-qpbo.html</link><description>
+
+
+
+
+&lt;div id="outline-container-org3f32de2" class="outline-2"&gt;
+&lt;h2 id="org3f32de2"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3f32de2"&gt;
+&lt;p&gt;
+Second order Markov random field is dedicated to models scenes composed by plan, which is good for urban scenes for example. Maximizing a MRF energy can be formulated as minimizing a function. It is known that it is not possible to find which set of label minimize the energy related …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Wed, 11 Nov 2015 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2015-11-11:/posts/note-fusion-move-qpbo.html</guid><category>Computer science</category><category>Stereo vision</category><category>QPBO</category><category>Graph-cut</category><category>Photogrammetry</category></item><item><title>Extending α-expansion to a larger set of regularization functions</title><link>http://lcaraffa.net/posts/article-2015icip-extalphaexp.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2015icip-extalphaexp/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0470b6d" class="outline-2"&gt;
+&lt;h2 id="org0470b6d"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0470b6d"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org5f0a219" class="outline-4"&gt;
+&lt;h4 id="org5f0a219"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5f0a219"&gt;
+&lt;p&gt;
+Many problems of image processing lead to the minimization of an energy, which is a function of one or several given images, with respect to a binary or multi-label image. When this energy is made of unary data terms and of pairwise regularization terms, and when the pairwise regularization …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Thu, 01 Jan 2015 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2015-01-01:/posts/article-2015icip-extalphaexp.html</guid><category>Alpha-expansion</category><category>Optimization</category><category>Publication</category></item><item><title>The Guided Bilateral Filter: When the Joint/Cross Bilateral Filter Becomes Robust</title><link>http://lcaraffa.net/posts/article-2015TIP-guided-bilateral.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2015TIP-guided-bilateral/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org8d54646" class="outline-2"&gt;
+&lt;h2 id="org8d54646"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8d54646"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgc66f56b" class="outline-4"&gt;
+&lt;h4 id="orgc66f56b"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc66f56b"&gt;
+&lt;p&gt;
+The bilateral filter and its variants such as the Joint/Cross bilateral filter are well known edge-preserving image smoothing tools used in many applications. The reason of this success is its simple definition and the possibility of many adaptations. The bilateral filter is known to be related to robust …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Thu, 01 Jan 2015 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2015-01-01:/posts/article-2015TIP-guided-bilateral.html</guid><category>Computer science</category><category>Publication</category><category>Source code</category></item><item><title>Graduate non convexity approach for robust fitting</title><link>http://lcaraffa.net/posts/note-gnc.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-gnc/newtongnc.gif" alt="newtongnc.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;
+This example shows the estimation of the mean with the graduate non convexity approach using a newton optimization at each step for locally minimizing the energy.
+Green points are a realization of a normal distribution (vertical line shows the mean), red crosses are outliers. The blue line is the normalized …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Tue, 11 Nov 2014 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2014-11-11:/posts/note-gnc.html</guid><category>Computer science</category><category>Optimization</category><category>robust</category><category>graduate non convexity</category></item><item><title>Quadratic pseudo boolean optimization introduction</title><link>http://lcaraffa.net/posts/note-qpbo.html</link><description>
+
+
+
+
+&lt;div id="outline-container-orgd535464" class="outline-2"&gt;
+&lt;h2 id="orgd535464"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd535464"&gt;
+&lt;p&gt;
+Graph-based algorithms have been used for a decade in many applications for optimization. It produces very good results. First used empirically in image processing, it has been shown that graph-based approach algorithms in image processing are a reduction of optimizing pseudo Boolean function in binary case. In pseudo Boolean optimization …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Tue, 11 Nov 2014 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2014-11-11:/posts/note-qpbo.html</guid><category>Computer science</category><category>Optimization</category><category>QPBO</category><category>Graph-cut</category></item><item><title>Daytime Fog Detection and Density Estimation with Entropy Minimisation</title><link>http://lcaraffa.net/posts/article-2014IP-density-estimation.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2014IP-density-estimation/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org1c880e0" class="outline-2"&gt;
+&lt;h2 id="org1c880e0"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1c880e0"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org531f8f6" class="outline-4"&gt;
+&lt;h4 id="org531f8f6"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org531f8f6"&gt;
+&lt;p&gt;
+The fog disturbs the proper image processing of many outdoor
+observation tools. For instance, fog reduces the obstacle v
+isibility in
+vehicle driving applications. Usually, the estimation of t
+he amount of fog in the scene image allows to greatly improve t
+he image
+processing, and thus to better …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Sat, 11 Oct 2014 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2014-10-11:/posts/article-2014IP-density-estimation.html</guid><category>Fog</category><category>Visibility distance</category><category>Koschmieder</category></item><item><title>New York</title><link>http://lcaraffa.net/posts/photography-newyork.html</link><description>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671586091011" title="NewYork"&gt;&lt;img src="https://c8.staticflickr.com/8/7504/28382518583_c50bb89874_z.jpg" width="800" height="640" alt="NewYork"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Sun, 05 Jan 2014 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2014-01-05:/posts/photography-newyork.html</guid><category>New York</category><category>Photography</category></item><item><title>Markov Random Field Model for Single Image Defogging</title><link>http://lcaraffa.net/posts/article-2012IV-mrf-fog.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012IV-mrf-fog/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org5a4eccd" class="outline-2"&gt;
+&lt;h2 id="org5a4eccd"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5a4eccd"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org8f5d5ae" class="outline-4"&gt;
+&lt;h4 id="org8f5d5ae"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8f5d5ae"&gt;
+&lt;p&gt;
+Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. Each year, this causes traffic accidents. Fog is caused by a high concentration of very fine water droplets in the air. When light hits these droplets, it is scattered and this results in a dense white …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Mon, 11 Nov 2013 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2013-11-11:/posts/article-2012IV-mrf-fog.html</guid><category>Fog</category><category>MRF</category><category>Computer Science</category><category>Publication</category><category>Bad Weather</category></item><item><title>Corsica</title><link>http://lcaraffa.net/posts/photography-corsica.html</link><description>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671551953132" title="Corsica"&gt;&lt;img src="https://c7.staticflickr.com/9/8841/28636957862_95a522b5e4_c.jpg" width="800" height="495" alt="Corsica"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Sun, 05 May 2013 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2013-05-05:/posts/photography-corsica.html</guid><category>Milkyway</category><category>Corsica</category><category>Photography</category></item><item><title>Norway</title><link>http://lcaraffa.net/posts/photography-norway.html</link><description>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671324805530" title="Norway"&gt;&lt;img src="https://c1.staticflickr.com/9/8611/28457847840_00592a9ba2_c.jpg" width="800" height="450" alt="Norway"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Sun, 05 May 2013 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2013-05-05:/posts/photography-norway.html</guid><category>Norway</category><category>Photography</category></item><item><title>Stereo Reconstruction and Contrast Restoration in Daytime Fog</title><link>http://lcaraffa.net/posts/article-2012ACCV-stereo-fog.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012ACCV-stereo-fog/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org8ce273c" class="outline-2"&gt;
+&lt;h2 id="org8ce273c"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8ce273c"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgb3d3221" class="outline-4"&gt;
+&lt;h4 id="orgb3d3221"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb3d3221"&gt;
+&lt;p&gt;
+Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. 
+Each year, this causes traffic accidents. 
+Fog is caused by a high concentration of very fine water droplets in the air. 
+When light hits these droplets, it is scattered and this results in a dense white …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Sun, 11 Nov 2012 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2012-11-11:/posts/article-2012ACCV-stereo-fog.html</guid><category>Stereo reconstruction</category><category>fog</category><category>Bad Weather</category><category>Publication</category></item><item><title>Bolivia and Chile</title><link>http://lcaraffa.net/posts/photography-south-america.html</link><description>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671324735190" title="South America"&gt;&lt;img src="https://c7.staticflickr.com/9/8296/28457838070_d586b820a6_c.jpg" width="800" height="400" alt="South America"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Sat, 05 May 2012 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2012-05-05:/posts/photography-south-america.html</guid><category>Backpacking</category><category>Bolivia</category><category>Chile</category><category>Photography</category></item><item><title>Mercantour and Nice</title><link>http://lcaraffa.net/posts/photography-mercantour.html</link><description>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671585385531" title="Norway"&gt;&lt;img src="https://c1.staticflickr.com/9/8611/28457847840_00592a9ba2_c.jpg" width="800" height="450" alt="Norway"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Thu, 05 Jan 2012 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2012-01-05:/posts/photography-mercantour.html</guid><category>Photography</category></item><item><title>Vision Enhancement in Homogeneous and Heterogeneous Fog</title><link>http://lcaraffa.net/posts/article-2012itsm-vision-hen.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012itsm-vision-hen/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orge5cc0a7" class="outline-2"&gt;
+&lt;h2 id="orge5cc0a7"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge5cc0a7"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgc179ee2" class="outline-4"&gt;
+&lt;h4 id="orgc179ee2"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc179ee2"&gt;
+&lt;p&gt;
+One source of accidents when driving a vehicle
+is the presence of fog. Fog fades the colors and reduces the
+contrasts in the scene with respect to their distances from
+the driver. Various camera-based Advanced Driver Assistance
+Systems (ADAS) can be improved if efficient algorithms are
+designed for visibility …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Sun, 01 Jan 2012 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2012-01-01:/posts/article-2012itsm-vision-hen.html</guid><category>Computer science</category><category>Publication</category><category>Bad Weather</category></item><item><title>Fast 3D convex hull based on 3D triangulation</title><link>http://lcaraffa.net/posts/note-geom-algo.html</link><description>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-geom-algo/logo.jpg" alt="logo.jpg" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org266039e" class="outline-2"&gt;
+&lt;h2 id="org266039e"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org266039e"&gt;
+&lt;p&gt;
+The 3D triangulation algorithm of CGAL is highly efficient. Because the Convex hull is a subset of the 3D triangulation, the idea is to use the 3D triangulation to compute a new 3D convex hull algorithm. To this end, a greedy approach is used for maximizing the size of tetrahedra …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurent Caraffa</dc:creator><pubDate>Tue, 05 Jan 2010 00:00:00 +0100</pubDate><guid isPermaLink="false">tag:lcaraffa.net,2010-01-05:/posts/note-geom-algo.html</guid><category>CGAL</category><category>Convex hull</category><category>3D Delaunay</category></item></channel></rss>

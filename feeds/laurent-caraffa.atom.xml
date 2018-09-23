@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Laurent Caraffa - Laurent Caraffa</title><link href="http://lcaraffa.net/" rel="alternate"></link><link href="http://lcaraffa.net/feeds/laurent-caraffa.atom.xml" rel="self"></link><id>http://lcaraffa.net/</id><updated>2016-11-18T00:00:00+01:00</updated><entry><title>3D watertight mesh generation with uncertainties from ubiquitous data</title><link href="http://lcaraffa.net/posts/article-2016ACCV-wasure.html" rel="alternate"></link><published>2016-11-18T00:00:00+01:00</published><updated>2016-11-18T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2016-11-18:/posts/article-2016ACCV-wasure.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2016ACCV-wasure/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org48ffaee" class="outline-2"&gt;
+&lt;h2 id="org48ffaee"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org48ffaee"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org7c7d19b" class="outline-4"&gt;
+&lt;h4 id="org7c7d19b"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7c7d19b"&gt;
+&lt;p&gt;
+In this paper, we propose a generic framework for watertight mesh generation with uncertainties that provides a confidence measure on each reconstructed mesh triangle. Its input is a set of vision-based or Lidar-based 3D measurements which are converted to a set of mass functions that characterize the level of …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2016ACCV-wasure/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org48ffaee" class="outline-2"&gt;
+&lt;h2 id="org48ffaee"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org48ffaee"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org7c7d19b" class="outline-4"&gt;
+&lt;h4 id="org7c7d19b"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7c7d19b"&gt;
+&lt;p&gt;
+In this paper, we propose a generic framework for watertight mesh generation with uncertainties that provides a confidence measure on each reconstructed mesh triangle. Its input is a set of vision-based or Lidar-based 3D measurements which are converted to a set of mass functions that characterize the level of confidence on the occupancy of the scene as occupied, empty or unknown based on Dempster-Shafer Theory. The output is a multi-label segmentation of the ambient 3D space expressing the confidence for each resulting volume element to be occupied or  empty.
+While existing methods either sacrifice watertightness (local methods) or need to introduce a smoothness prior (global methods), we derive a per-triangle confidence measure that is able to gradually characterize when the resulting surface patches are certain due to dense and coherent measurements and when these patches are more uncertain and are mainly present to ensure smoothness and/or watertightness. The surface mesh reconstruction is formulated as a global energy minimization problem efficiently optimized with the alpha-expansion algorithm.  We claim that the resulting confidence measure is a good estimate of the local lack of sufficiently dense and coherent input measurements, which would be a valuable input for the next-best-view scheduling of a complementary acquisition.
+&lt;/p&gt;
+
+&lt;p&gt;
+Beside the new formulation, the proposed approach achieves state-of-the-art results on surface reconstruction benchmark. It is robust to noise, manages high scale disparity and produces a watertight surface with a small Hausdorff distance in uncertainty area thanks to the multi-label formulation. By simply thresholding the result, the method shows a good reconstruction quality compared to local algorithms on high density data. This is demonstrated on a large scale reconstruction combining real-world datasets from airborne and terrestrial Lidar and on an indoor scene reconstructed from images.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org409c28a" class="outline-4"&gt;
+&lt;h4 id="org409c28a"&gt;PDF&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org409c28a"&gt;
+&lt;p&gt;
+&lt;a href="http://lcaraffa.net/datas/pdfs/2016-accv-caraffa.pdf"&gt;http://lcaraffa.net/datas/pdfs/2016-accv-caraffa.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org1104315" class="outline-4"&gt;
+&lt;h4 id="org1104315"&gt;Bibtex&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org1104315"&gt;
+&lt;div class="org-src-container"&gt;
+&lt;pre class="src src-HTML"&gt;@inproceedings{
+   caraffa-accv16, author = {Caraffa, L. and Brédif, M. and Vallet, B.}, 
+   title = {3D watertight mesh generation with uncertainties from ubiquitous data},
+   booktitle = {Proceedings of Asian Conference on Computer Vision (ACCV'16)},
+   address = {Taipei, Taiwan},
+   publisher = {Springer}, 
+   series = {LNCS}, 
+   number = {7727}, 
+   year = {2016}, 
+   note = {http://lcaraffa.net/datas/pdfs/2016-accv-caraffa.pdf} }
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Surface reconstruction"></category><category term="Optimization"></category><category term="Lidar"></category><category term="Publication"></category></entry><entry><title>Augmented reality with MicMac and Blender</title><link href="http://lcaraffa.net/posts/note-augmented-reality-blender.html" rel="alternate"></link><published>2016-05-05T00:00:00+02:00</published><updated>2016-05-05T00:00:00+02:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2016-05-05:/posts/note-augmented-reality-blender.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-augmented-reality-blender/logo.jpg" alt="logo.jpg" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4e67d5d" class="outline-2"&gt;
+&lt;h2 id="org4e67d5d"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4e67d5d"&gt;
+&lt;p&gt;
+The structure from motion is processed with MimMac. The render with Blender. 
+&lt;/p&gt;
+
+&lt;object style="border: medium none; overflow: hidden; width: 420px; height: 315px;" data="//www.youtube.com/embed/ePcB6zOxWdc?rel=0"&gt;                     
+&lt;/object&gt;   
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-orge166d78" class="outline-4"&gt;
+&lt;h4 id="orge166d78"&gt;Softs :&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge166d78"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="http://logiciels.ign.fr/?Micmac"&gt;MicMAc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.blender.org/"&gt;Blender&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-augmented-reality-blender/logo.jpg" alt="logo.jpg" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org4e67d5d" class="outline-2"&gt;
+&lt;h2 id="org4e67d5d"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org4e67d5d"&gt;
+&lt;p&gt;
+The structure from motion is processed with MimMac. The render with Blender. 
+&lt;/p&gt;
+
+&lt;object style="border: medium none; overflow: hidden; width: 420px; height: 315px;" data="//www.youtube.com/embed/ePcB6zOxWdc?rel=0"&gt;                     
+&lt;/object&gt;   
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-orge166d78" class="outline-4"&gt;
+&lt;h4 id="orge166d78"&gt;Softs :&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orge166d78"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="http://logiciels.ign.fr/?Micmac"&gt;MicMAc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.blender.org/"&gt;Blender&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Computer science"></category><category term="Micmac"></category><category term="3D"></category><category term="3D rendering"></category><category term="Blender"></category></entry><entry><title>Second order MRF with QPBO Optimization</title><link href="http://lcaraffa.net/posts/note-fusion-move-qpbo.html" rel="alternate"></link><published>2015-11-11T00:00:00+01:00</published><updated>2015-11-11T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2015-11-11:/posts/note-fusion-move-qpbo.html</id><summary type="html">
+
+
+
+
+&lt;div id="outline-container-org3f32de2" class="outline-2"&gt;
+&lt;h2 id="org3f32de2"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3f32de2"&gt;
+&lt;p&gt;
+Second order Markov random field is dedicated to models scenes composed by plan, which is good for urban scenes for example. Maximizing a MRF energy can be formulated as minimizing a function. It is known that it is not possible to find which set of label minimize the energy related …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+
+
+
+
+&lt;div id="outline-container-org3f32de2" class="outline-2"&gt;
+&lt;h2 id="org3f32de2"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org3f32de2"&gt;
+&lt;p&gt;
+Second order Markov random field is dedicated to models scenes composed by plan, which is good for urban scenes for example. Maximizing a MRF energy can be formulated as minimizing a function. It is known that it is not possible to find which set of label minimize the energy related to a second order MRF. To tackle this problem, the fusion move approach can be used. This method, based on the quadratic pseudo boolean optimization, takes two set of labels and finds the combination of labels which minimize the global MRF energy. 
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org1c66060" class="outline-3"&gt;
+&lt;h3 id="org1c66060"&gt;Example : fusion move&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org1c66060"&gt;
+&lt;p&gt;
+This example shows a fusion move between two depth maps. First line: two synthetic stereo pairs. Second line: first, a depth map resulting from a local window matching approach. The second by fitting the main plan of the scene. The last column shows the set of disparity which is computed by the fusion move. The depth from the local windows approach are kept in front-parallel objects. The road area is selected from the road plan. 
+&lt;/p&gt;
+
+&lt;img src="../note-fusion-move-qpbo/L-road.jpg" style="display:inline" width="30%" /&gt; 
+&lt;img src="../note-fusion-move-qpbo/R-road.jpg" style="display:inline" width="30%" /&gt;
+ &lt;br&gt;&lt;br&gt;
+
+&lt;img src="../note-fusion-move-qpbo/fus_plan_pro0.jpg" style="display:inline" width="30%" /&gt; 
+&lt;img src="../note-fusion-move-qpbo/fus_plan_cur.jpg" style="display:inline" width="30%" /&gt; 
+&lt;img src="../note-fusion-move-qpbo/res.jpg" style="display:inline" width="30%" /&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-orgc9ec1be" class="outline-3"&gt;
+&lt;h3 id="orgc9ec1be"&gt;References&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc9ec1be"&gt;
+&lt;p&gt;
+References:
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;For more information about on fusion move approach :
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Victor Lempitsky, Carsten Rother, Stefan Roth, Andrew Blake, "Fusion Moves for Markov Random Field Optimization," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 32, no. 8, pp. 1392-1405, August, 2010&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Code:
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;On this page, Vladimir Kolmogorov proposes a fast C++ application for solving QPBO problems. To handle high order clique energy, see the high order clique reduction implementation by Ishikawa here which is an interface of the previous code.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Computer science"></category><category term="Stereo vision"></category><category term="QPBO"></category><category term="Graph-cut"></category><category term="Photogrammetry"></category></entry><entry><title>Extending α-expansion to a larger set of regularization functions</title><link href="http://lcaraffa.net/posts/article-2015icip-extalphaexp.html" rel="alternate"></link><published>2015-01-01T00:00:00+01:00</published><updated>2015-01-01T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2015-01-01:/posts/article-2015icip-extalphaexp.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2015icip-extalphaexp/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0470b6d" class="outline-2"&gt;
+&lt;h2 id="org0470b6d"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0470b6d"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org5f0a219" class="outline-4"&gt;
+&lt;h4 id="org5f0a219"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5f0a219"&gt;
+&lt;p&gt;
+Many problems of image processing lead to the minimization of an energy, which is a function of one or several given images, with respect to a binary or multi-label image. When this energy is made of unary data terms and of pairwise regularization terms, and when the pairwise regularization …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2015icip-extalphaexp/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org0470b6d" class="outline-2"&gt;
+&lt;h2 id="org0470b6d"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org0470b6d"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org5f0a219" class="outline-4"&gt;
+&lt;h4 id="org5f0a219"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5f0a219"&gt;
+&lt;p&gt;
+Many problems of image processing lead to the minimization of an energy, which is a function of one or several given images, with respect to a binary or multi-label image. When this energy is made of unary data terms and of pairwise regularization terms, and when the pairwise regularization term is a metric, the multi-label energy can be minimized quite rapidly, using the so-called α-expansion algorithm. α-expansion consists in decomposing the multi-label optimization into a series of binary sub-problems called move. Depending on the chosen decomposition, a different condition on the regularization term applies. The metric condition for α-expansion move is rather restrictive. In many cases, the statistical model of the problem leads to an energy which is not a metric. Based on the enlightening article &lt;sup&gt;&lt;a id="fnr.1" class="footref" href="#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;, we derive another condition for α-jump move. Finally, we propose an alternated scheme which can be used even if the energy fulfills neither the α-expansion nor β-jump condition. The proposed scheme applies to a much larger class of regularization functions, compared to α-expansion. This opens many possibilities of improvements on diverse image processing problems. We illustrate the advantages of the proposed optimization scheme on the image noise reduction problem. 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgc03448e" class="outline-4"&gt;
+&lt;h4 id="orgc03448e"&gt;PDF&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc03448e"&gt;
+&lt;p&gt;
+&lt;a href="http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-icip15.pdf"&gt;http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-icip15.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-org7c8ba3c" class="outline-4"&gt;
+&lt;h4 id="org7c8ba3c"&gt;Bibtex&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org7c8ba3c"&gt;
+&lt;div class="org-src-container"&gt;
+&lt;pre class="src src-HTML"&gt;@inproceedings{jpt-icip15, 
+  author    = {Paget, M. and Tarel, J.-P. and Caraffa, L.},
+  title     = {Extending $\alpha$-expansion to a larger set of regularization functions},
+  booktitle = {Proceedings of IEEE International Conference on Image Processing (ICIP'15)}, 
+  date      = {September 27-30},
+  address   = {Qu\'ebec City, Canada},
+  pages     = {1051--1055},
+  year      = {2015},
+  note      = {http://perso.lcpc.fr/tarel.jean-philippe/publis/icip15.html}
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="footnotes"&gt;
+&lt;h4 class="footnotes"&gt;Footnotes: &lt;/h4&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+Endre Boros and Peter L. Hammer. 2002. Pseudo-boolean optimization. Discrete Appl. Math. 123, 1-3 (November 2002), 155-225. DOI=&lt;a href="http://dx.doi.org/10.1016/S0166-218X(01)"&gt;http://dx.doi.org/10.1016/S0166-218X(01)&lt;/a&gt;00341-9
+&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="Alpha-expansion"></category><category term="Optimization"></category><category term="Publication"></category></entry><entry><title>The Guided Bilateral Filter: When the Joint/Cross Bilateral Filter Becomes Robust</title><link href="http://lcaraffa.net/posts/article-2015TIP-guided-bilateral.html" rel="alternate"></link><published>2015-01-01T00:00:00+01:00</published><updated>2015-01-01T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2015-01-01:/posts/article-2015TIP-guided-bilateral.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2015TIP-guided-bilateral/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org8d54646" class="outline-2"&gt;
+&lt;h2 id="org8d54646"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8d54646"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgc66f56b" class="outline-4"&gt;
+&lt;h4 id="orgc66f56b"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc66f56b"&gt;
+&lt;p&gt;
+The bilateral filter and its variants such as the Joint/Cross bilateral filter are well known edge-preserving image smoothing tools used in many applications. The reason of this success is its simple definition and the possibility of many adaptations. The bilateral filter is known to be related to robust …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2015TIP-guided-bilateral/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org8d54646" class="outline-2"&gt;
+&lt;h2 id="org8d54646"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8d54646"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgc66f56b" class="outline-4"&gt;
+&lt;h4 id="orgc66f56b"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc66f56b"&gt;
+&lt;p&gt;
+The bilateral filter and its variants such as the Joint/Cross bilateral filter are well known edge-preserving image smoothing tools used in many applications. The reason of this success is its simple definition and the possibility of many adaptations. The bilateral filter is known to be related to robust estimation. This link is lost by the ad hoc introduction of the guide image in the Joint/Cross bilateral filter. We here propose a new way to derive the Joint/Cross bilateral filter as a particular case of a more generic filter which we name the Guided bilateral filter. This new filter is iterative, generic, inherits the robustness properties of the Robust bilateral filter and uses a guide image. The link with robust estimation allows us to relate the filter parameters with the statistics of input images. A scheme based on Graduated Non Convexity is proposed, which allows converging to an interesting local minimum even when the cost function is non-convex. With this scheme, the Guided bilateral filter can handle non-Gaussian noise on the image to be filtered. A complementary scheme is proposed to handle also non-Gaussian noise on the guide image even if both are strongly correlated. This allows the Guided bilateral filter to handle situations with more noise than the Joint/Cross bilateral filter can work with and leads to high Peak Signal to Noise Ratio PSNR values as shown experimentally. 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgca5759c" class="outline-4"&gt;
+&lt;h4 id="orgca5759c"&gt;Source&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgca5759c"&gt;
+&lt;p&gt;
+&lt;a href="http://perso.lcpc.fr/tarel.jean-philippe/gbfilter/guided_bilateral_filter.zip"&gt;Matlab/Mex/C source code&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org476ed85" class="outline-4"&gt;
+&lt;h4 id="org476ed85"&gt;Bibtex&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org476ed85"&gt;
+&lt;div class="org-src-container"&gt;
+&lt;pre class="src src-HTML"&gt;@ARTICLE{jpt-ip15, author = {Caraffa, L. and Tarel, J.-P. and Charbonnier, P.}, title = {The Guided Bilateral Filter: When the Joint/Cross Bilateral Filter Becomes Robust}, journal = {IEEE Transactions on Image Processing}, volume = {24}, number = {4}, year = {2015}, pages = {1199--1208}, month = apr, url = {http://perso.lcpc.fr/tarel.jean-philippe/publis/ip15.html}, doi = {10.1109/TIP.2015.2389617} }
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Computer science"></category><category term="Publication"></category><category term="Source code"></category></entry><entry><title>Graduate non convexity approach for robust fitting</title><link href="http://lcaraffa.net/posts/note-gnc.html" rel="alternate"></link><published>2014-11-11T00:00:00+01:00</published><updated>2014-11-11T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2014-11-11:/posts/note-gnc.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-gnc/newtongnc.gif" alt="newtongnc.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;
+This example shows the estimation of the mean with the graduate non convexity approach using a newton optimization at each step for locally minimizing the energy.
+Green points are a realization of a normal distribution (vertical line shows the mean), red crosses are outliers. The blue line is the normalized …&lt;/p&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-gnc/newtongnc.gif" alt="newtongnc.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;
+This example shows the estimation of the mean with the graduate non convexity approach using a newton optimization at each step for locally minimizing the energy.
+Green points are a realization of a normal distribution (vertical line shows the mean), red crosses are outliers. The blue line is the normalized cost function.
+The algorithm starts from a convex estimator (the normal distribution in this case). Step by step, a more robust estimator is taken. The black point shows the current estimate of the mean. 
+&lt;/p&gt;
+&lt;div id="outline-container-org5b6179b" class="outline-2"&gt;
+&lt;h2 id="org5b6179b"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5b6179b"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org2ccab14" class="outline-3"&gt;
+&lt;h3 id="org2ccab14"&gt;Introduction&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org2ccab14"&gt;
+&lt;p&gt;
+Many problems have a non convex energy formulation. Therefore, reaching the global minimal in a finite time is not guaranteed. Non convex functions are often used for robust estimation to estimate variable under non-Gaussian noise. The graduated non convexity approach provides a generic method for reaching an interesting minima when robust estimators are needed.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgb6af64a" class="outline-3"&gt;
+&lt;h3 id="orgb6af64a"&gt;Generic approach for robust linear fitting&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgb6af64a"&gt;
+&lt;p&gt;
+For many problems, we are looking for  model parameters \(\phi\) of a probability function which maximize the given function from paired training examples \(y_i\) and \(x_i\)  :
+&lt;/p&gt;
+
+
+&lt;p&gt;
+\[ {\underset{\mathrm{\phi}}{\text{argmax}}}\;[  Pr(y_i | x_i,\phi) ] \]
+&lt;/p&gt;
+
+
+&lt;p&gt;
+Where the variable \(y_i\) is linearly related to \(x_i\) by \(\phi\) as following : 
+&lt;/p&gt;
+
+&lt;p&gt;
+\[ y_i = \phi x_i + \epsilon \]
+&lt;/p&gt;
+
+
+&lt;p&gt;
+\(\epsilon\) is the perturbation related to the noise distribution.
+When the noise is supposed gaussian, the normal distribution is chosen and this leads to the well known least square problem when the negative-log of the &lt;b&gt;pdf&lt;/b&gt; is taken.
+This formulation is very sensitive to outliers because of the Gaussian noise assumption. 
+To tackle this problem, one will choose a robust estimator instead of the normal distribution.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org41bf988" class="outline-3"&gt;
+&lt;h3 id="org41bf988"&gt;Graduated non convexity approach&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org41bf988"&gt;
+&lt;p&gt;
+The cost function of a robust estimator is often not convex, consequently, global minima cannot be computed in a finite time. To reach an interesting local minima, 
+this problem can be optimized with the &lt;b&gt;graduate-non-convexity&lt;/b&gt; approach. 
+The idea of this algorithm is to start from a convex estimator (the normal distribution for example) and 
+change the sharp of the cost function until it reaches an estimator robust enough to fit as good as possible the targeted distribution.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org3962c23" class="outline-4"&gt;
+&lt;h4 id="org3962c23"&gt;Example : Robust polynomial and conic coefficient estimation&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3962c23"&gt;
+&lt;p&gt;
+Here are examples of polynomial coefficient estimation by "graduated non convexity" approach. Blue lines are iterated steps, green line is the ground truth. 
+                    Data are coloured with the derivative cost of the current estimator. Red : the derivative is close to one; blue : tends to 0.
+                    Red points are constraints added with a Lagrangian multiplier.  
+&lt;/p&gt;
+
+
+&lt;img src="../note-gnc/gnc10.gif" style="display:inline" alt="gnc10.gif" width="30%" /&gt; 
+&lt;img src="../note-gnc/gnc3.gif" style="display:inline" alt="gnc3.gif" width="30%" /&gt; 
+&lt;img src="../note-gnc/gnc6.gif" style="display:inline" alt="gnc6.gif" width="30%" /&gt;   
+
+&lt;p&gt;
+The conic equation can be written as an explicit least square form, and thus, can also be optimized with the GNC approach : 
+&lt;/p&gt;
+
+&lt;img src="../note-gnc/gnc-ellipse.gif" style="display:inline" alt="gnc-ellipse.gif" width="30%" /&gt; 
+&lt;img src="../note-gnc/gnc-ellipse2.gif" style="display:inline" alt="gnc-ellipse2.gif" width="30%" /&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Computer science"></category><category term="Optimization"></category><category term="robust"></category><category term="graduate non convexity"></category></entry><entry><title>Quadratic pseudo boolean optimization introduction</title><link href="http://lcaraffa.net/posts/note-qpbo.html" rel="alternate"></link><published>2014-11-11T00:00:00+01:00</published><updated>2014-11-11T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2014-11-11:/posts/note-qpbo.html</id><summary type="html">
+
+
+
+
+&lt;div id="outline-container-orgd535464" class="outline-2"&gt;
+&lt;h2 id="orgd535464"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd535464"&gt;
+&lt;p&gt;
+Graph-based algorithms have been used for a decade in many applications for optimization. It produces very good results. First used empirically in image processing, it has been shown that graph-based approach algorithms in image processing are a reduction of optimizing pseudo Boolean function in binary case. In pseudo Boolean optimization …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+
+
+
+
+&lt;div id="outline-container-orgd535464" class="outline-2"&gt;
+&lt;h2 id="orgd535464"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orgd535464"&gt;
+&lt;p&gt;
+Graph-based algorithms have been used for a decade in many applications for optimization. It produces very good results. First used empirically in image processing, it has been shown that graph-based approach algorithms in image processing are a reduction of optimizing pseudo Boolean function in binary case. In pseudo Boolean optimization, optimizing pseudo Boolean function by reducing the problem to a graph-based algorithm is known for a while. 
+Actually, many interesting properties and algorithms in this field have greatly improved the state of the art algorithms in image processing. 
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgcfbffc9" class="outline-3"&gt;
+&lt;h3 id="orgcfbffc9"&gt;Pseudo Boolean function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgcfbffc9"&gt;
+&lt;p&gt;
+A pseudo boolean function has the following form:
+&lt;/p&gt;
+
+&lt;p&gt;
+\[ f(x_1,...,x_n) = a_0 + \sum_{i=1}^n a_i x_i + \sum_{1\le i \le j \le n} a_{ij}x_{i}x_{j} + \sum_{1\le i \le j \le k \le n} a_{ijk}x_{i}x_{j}x_{k} + ... \]
+&lt;/p&gt;
+
+&lt;p&gt;
+Where \(x_n\) are Boolean variables and \(a_i\) reals. By introducing the complement \(\bar{x}\), the previous form can be rewritten with only positive coefficents.
+This form is called &lt;b&gt;posiform&lt;/b&gt;. It is generally this form which is minimized. 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org23d9648" class="outline-3"&gt;
+&lt;h3 id="org23d9648"&gt;Optimizing sub-modular function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org23d9648"&gt;
+&lt;p&gt;
+A special case of pseudo Boolean optimization is when the function is sub-modular (This notion is closely related to convex functions in continuous case).
+        In this case, the global minima can be reached in polynomial time.
+        All pseudo Boolean function can be reduced to a quadratic pseudo Boolean function (a maximum of two variables per term).
+        When the quadratic form is sub-modular, the global minima can be computed with a graph-cut algorithm.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgbf996b1" class="outline-4"&gt;
+&lt;h4 id="orgbf996b1"&gt;Example : Optimizing quadratic sub-modular function&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgbf996b1"&gt;
+&lt;p&gt;
+For example, minimizing the following sub-modular pseudo Boolean function :
+\(\phi(\textbf{x}) = \overline{x}_1+6x_1+4\overline{x}_2+x_2+ 2x_1\overline{x}_2\)
+is the same that finding the minimum cut of the graph :
+&lt;/p&gt;
+
+&lt;img src="../note-qpbo/mincut.svg" style="display:inline" alt="mincut" /&gt; 
+&lt;img src="../note-qpbo/tt1.gif" style="display:inline" alt="tab 1" /&gt; 
+
+
+&lt;p&gt;
+Where \(s\) is the source and \(t\) the sink.
+A edge cut from \(s\) to \(x_i\) means that the variable \(x_i\) is affected to 0.
+Inversely, \(x\) is affected to 1 when the edge is cut from x to \(t\).
+A cut is counted only if the tail is on the source side and the head on the sink side.
+With this formulation, the sum of the edge cut weigh is equal 
+to the cost of the pseudo Boolean function with the previous affectation (see for instance the truth table).
+In this example, the cut which minimize the sum of the edges cost is \(c2\) (1+1) with \(x_1=0\) and \(x_2=1\).
+This is the same label set which minimize the pseudo-Boolean function \(\phi(\{1,0\})=2\).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org7eada19" class="outline-3"&gt;
+&lt;h3 id="org7eada19"&gt;Optimizing non sub-modular function&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-org7eada19"&gt;
+&lt;p&gt;
+When a pseudo Boolean function is not sub-modular (or at least cannot be identified as sub-modular), the global minima cannot be reached in polynomial time anymore. However, 
+       a subset of label which are guaranteed to belong to the global minima can be computed in polynomial time.
+&lt;/p&gt;
+
+
+&lt;p&gt;
+A quadratic pseudo Boolean function can be rewritten with a biggest constant term. 
+       The expression when the constant term is maximum is called the &lt;b&gt;roof duality&lt;/b&gt;.
+       When the roof duality is reached, the affectation which makes linear terms vanishing are a part of the global minima.
+       A max flow approach can be used (instead of many others) to compute the roof duality and find the subset of affectations which minimize globally the function.
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgdc750f9" class="outline-4"&gt;
+&lt;h4 id="orgdc750f9"&gt;Example : Global subset affectation in general case&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgdc750f9"&gt;
+&lt;p&gt;
+This quadratic Boolean function  \(\phi(\textbf{x}) = 10x_1 + 8\overline{x}_1x_2 + 6\overline{x}_2x_3 + 4\overline{x}_3  \label{eq:co:1}\) 
+can be transformed to the following \(\phi(\textbf{x}) = 4 + 6x_1 + 4x_1\overline{x}_2  + 4\overline{x}_1x_2 + 2\overline{x}_2x_3 + 4x_2\overline{x}_3  \label{eq:co:4}\)
+with the same truth table by extracting the constant term \(4\). This can be done using a max flow approach. 
+&lt;/p&gt;
+
+&lt;img src="../note-qpbo/maxflow.svg" style="display:inline" width="30%" /&gt; 
+&lt;img src="../note-qpbo/maxflow-res.svg" style="display:inline" width="30%" /&gt; 
+
+&lt;p&gt;
+Where \(s\) is the source and \(t\) the sink.
+The max flow of the graph is equal to the constant term. From this point forward, 
+Once the &lt;b&gt;roof duality&lt;/b&gt; is reached, a set of variables which are common to every global minima called &lt;b&gt;strong persistent&lt;/b&gt; 
+can be affected to simplify the function by analysing the residual graph. 
+Each node which can be reached from the source of the residual graph can be fixed
+with \(0\) if the node is the complement &lt;b&gt;bar&lt;/b&gt;, otherwise \(1\). 
+In the following examples, the set \(\{0,0,0\}\) is strongly persistent. In this case, the set minimizes globally the solution
+because \(\phi(\{0,0,0\}) = 4\).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgc8b7a2d" class="outline-3"&gt;
+&lt;h3 id="orgc8b7a2d"&gt;References&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-orgc8b7a2d"&gt;
+&lt;p&gt;
+For more details, see an introduction to pseudo Boolean function optimization:
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Endre Boros and Peter L. Hammer. 2002. Pseudo-Boolean optimization. Discrete Appl. Math. 123, 1-3 (November 2002), 155-225. DOI=10.1016/S0166-218X(01)00341-9 &lt;a href="http://dx.doi.org/10.1016/S0166-218X(01)"&gt;http://dx.doi.org/10.1016/S0166-218X(01)&lt;/a&gt;00341-9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Computer science"></category><category term="Optimization"></category><category term="QPBO"></category><category term="Graph-cut"></category></entry><entry><title>Daytime Fog Detection and Density Estimation with Entropy Minimisation</title><link href="http://lcaraffa.net/posts/article-2014IP-density-estimation.html" rel="alternate"></link><published>2014-10-11T00:00:00+02:00</published><updated>2014-10-11T00:00:00+02:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2014-10-11:/posts/article-2014IP-density-estimation.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2014IP-density-estimation/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org1c880e0" class="outline-2"&gt;
+&lt;h2 id="org1c880e0"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1c880e0"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org531f8f6" class="outline-4"&gt;
+&lt;h4 id="org531f8f6"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org531f8f6"&gt;
+&lt;p&gt;
+The fog disturbs the proper image processing of many outdoor
+observation tools. For instance, fog reduces the obstacle v
+isibility in
+vehicle driving applications. Usually, the estimation of t
+he amount of fog in the scene image allows to greatly improve t
+he image
+processing, and thus to better …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2014IP-density-estimation/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org1c880e0" class="outline-2"&gt;
+&lt;h2 id="org1c880e0"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org1c880e0"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org531f8f6" class="outline-4"&gt;
+&lt;h4 id="org531f8f6"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org531f8f6"&gt;
+&lt;p&gt;
+The fog disturbs the proper image processing of many outdoor
+observation tools. For instance, fog reduces the obstacle v
+isibility in
+vehicle driving applications. Usually, the estimation of t
+he amount of fog in the scene image allows to greatly improve t
+he image
+processing, and thus to better perform the observation task
+. One possibility is to restore the visibility of the contras
+ts in the image from
+the foggy scene image before to apply the usual image process
+ing. Several algorithms were proposed in the recent years for defogging.
+Before to apply the defogging, it is necessary to detect the p
+resence of fog, not to emphasis the contrasts due to noise. Su
+rprisingly, only
+a reduced number of image processing algorithms were propos
+ed for fog detection and characterization. Most of them are d
+edicated to
+static cameras and can not be used when the camera is moving. T
+he daytime fog is characterized by its extinction coefficien
+t, which
+is equivalent to the visibility distance. A visibility-met
+er can be used for fog detection and characterization, but th
+is kind of sensor
+performs an estimation in a relatively small volume of air, a
+nd is thus subject to heterogeneous fog, and air turbulence w
+hen the camera
+moves.
+In this paper, we propose an original algorithm, based on ent
+ropy minimization, to detect the fog and estimate its extinc
+tion coefficient
+by the processing of stereo pairs. This algorithm is fast, pr
+ovides accurate results using low cost stereo cameras senso
+r and, the more
+important, can work when the cameras are moving. The propose
+d algorithm is evaluated on synthetic and camera images with
+ground
+truth. Results show that the proposed method is accurate, an
+d, combined with a fast stereo reconstruction algorithm, sh
+ould provide a
+solution, close to real time, for fog detection and extincti
+on coefficient estimation for moving sensors
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgf450fc2" class="outline-4"&gt;
+&lt;h4 id="orgf450fc2"&gt;PDF&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgf450fc2"&gt;
+&lt;p&gt;
+&lt;a href="https://hal.archives-ouvertes.fr/file/index/docid/1068534/filename/doc00019386.pdf"&gt;https://hal.archives-ouvertes.fr/file/index/docid/1068534/filename/doc00019386.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-orgfeb6c2c" class="outline-4"&gt;
+&lt;h4 id="orgfeb6c2c"&gt;Bibtex&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgfeb6c2c"&gt;
+&lt;div class="org-src-container"&gt;
+&lt;pre class="src src-HTML"&gt;@inproceedings{jpt-pcv14,
+author = {Caraffa, L. and Tarel, J.-P.},
+title = {Daytime Fog Detection and Density Estimation with Entropy Minimisation},
+booktitle = {ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences (PCV'14)},
+volume = {II-3}, date = {September 5-7}, address = {Zurich, Switzerland}, year = {2014}, pages = {25-31}, 
+note = {http://perso.lcpc.fr/tarel.jean-philippe/publis/pcv14.html} }
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Fog"></category><category term="Visibility distance"></category><category term="Koschmieder"></category></entry><entry><title>New York</title><link href="http://lcaraffa.net/posts/photography-newyork.html" rel="alternate"></link><published>2014-01-05T00:00:00+01:00</published><updated>2014-01-05T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2014-01-05:/posts/photography-newyork.html</id><summary type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671586091011" title="NewYork"&gt;&lt;img src="https://c8.staticflickr.com/8/7504/28382518583_c50bb89874_z.jpg" width="800" height="640" alt="NewYork"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</summary><content type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671586091011" title="NewYork"&gt;&lt;img src="https://c8.staticflickr.com/8/7504/28382518583_c50bb89874_z.jpg" width="800" height="640" alt="NewYork"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</content><category term="New York"></category><category term="Photography"></category></entry><entry><title>Markov Random Field Model for Single Image Defogging</title><link href="http://lcaraffa.net/posts/article-2012IV-mrf-fog.html" rel="alternate"></link><published>2013-11-11T00:00:00+01:00</published><updated>2013-11-11T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2013-11-11:/posts/article-2012IV-mrf-fog.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012IV-mrf-fog/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org5a4eccd" class="outline-2"&gt;
+&lt;h2 id="org5a4eccd"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5a4eccd"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org8f5d5ae" class="outline-4"&gt;
+&lt;h4 id="org8f5d5ae"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8f5d5ae"&gt;
+&lt;p&gt;
+Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. Each year, this causes traffic accidents. Fog is caused by a high concentration of very fine water droplets in the air. When light hits these droplets, it is scattered and this results in a dense white …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012IV-mrf-fog/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org5a4eccd" class="outline-2"&gt;
+&lt;h2 id="org5a4eccd"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org5a4eccd"&gt;
+&lt;/div&gt;&lt;div id="outline-container-org8f5d5ae" class="outline-4"&gt;
+&lt;h4 id="org8f5d5ae"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org8f5d5ae"&gt;
+&lt;p&gt;
+Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. Each year, this causes traffic accidents. Fog is caused by a high concentration of very fine water droplets in the air. When light hits these droplets, it is scattered and this results in a dense white background, called the atmospheric veil. As pointed in &lt;sup&gt;&lt;a id="fnr.1" class="footref" href="#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt;, Advanced Driver Assistance Systems (ADAS) based on the display of defogged images from a camera may help the driver by improving objects visibility in the image and thus may leads to a decrease of fatality and injury rates. In the last few years, the problem of single image defogging has attracted attention in the image processing community. Being an ill-posed problem, several methods have been proposed. However, a few among of these methods are dedicated to the processing of road images. One of the first exception is the method in &lt;sup&gt;&lt;a id="fnr.2" class="footref" href="#fn.2"&gt;2&lt;/a&gt;&lt;/sup&gt;, &lt;sup&gt;&lt;a id="fnr.1.100" class="footref" href="#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt; where a planar constraint is introduced to improve the restoration of the road area, assuming an approximately flat road. The single image defogging problem being ill-posed, the choice of the Bayesian approach seems adequate to set this problem as an inference problem. A first Markov Random Field (MRF) approach of the problem has been proposed recently in &lt;sup&gt;&lt;a id="fnr.3" class="footref" href="#fn.3"&gt;3&lt;/a&gt;&lt;/sup&gt;. However, this method is not dedicated to road images. In this paper, we propose a novel MRF model of the single image defogging problem which applies to all kinds of images but can also easily be refined to obtain better results on road images using the planar constraint. A comparative study and quantitative evaluation with several state-of-the-art algorithms is presented. This evaluation demonstrates that the proposed MRF model allows to derive a new algorithm which produces better quality results, in particular in case of a noisy input image.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgc3f47ae" class="outline-4"&gt;
+&lt;h4 id="orgc3f47ae"&gt;PDF&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc3f47ae"&gt;
+&lt;p&gt;
+&lt;a href="http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-iv13.pdf"&gt;http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-iv13.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org3a28a83" class="outline-4"&gt;
+&lt;h4 id="org3a28a83"&gt;Bibtex&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org3a28a83"&gt;
+&lt;div class="org-src-container"&gt;
+&lt;pre class="src src-HTML"&gt;@inproceedings{jpt-iv13, 
+		   author    = {Caraffa, L. and Tarel, J.-P.}, 
+		   title     = {Markov Random Field Model for Single Image Defogging},
+		   booktitle = {Proceedings of IEEE Intelligent Vehicle Symposium (IV'2013)}, 
+		   date      = {June 23-26},
+		   address   = {Gold Coast, Australia},
+		   year      = {2013},
+		   pages     = {994-999},
+		   note      = {http://perso.lcpc.fr/tarel.jean-philippe/publis/iv13.html}
+	       }
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="footnotes"&gt;
+&lt;h4 class="footnotes"&gt;Footnotes: &lt;/h4&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+Tarel, J. P., Hautiere, N., Caraffa, L., Cord, A., Halmaoui, H., &amp;amp; Gruyer, D. (2012). Vision enhancement in homogeneous and heterogeneous fog. IEEE Intelligent Transportation Systems Magazine, 4(2), 6-20.
+&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.2" class="footnum" href="#fnr.2"&gt;2&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+Tarel, J. P., Hautiere, N., Cord, A., Gruyer, D., &amp;amp; Halmaoui, H. (2010, June). Improved visibility of road scene images under heterogeneous fog. In Intelligent Vehicles Symposium (IV), 2010 IEEE (pp. 478-485). IEEE.
+&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.3" class="footnum" href="#fnr.3"&gt;3&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+Nishino, K., Kratz, L., &amp;amp; Lombardi, S. (2012). Bayesian defogging. International journal of computer vision, 98(3), 263-278.
+&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="Fog"></category><category term="MRF"></category><category term="Computer Science"></category><category term="Publication"></category><category term="Bad Weather"></category></entry><entry><title>Corsica</title><link href="http://lcaraffa.net/posts/photography-corsica.html" rel="alternate"></link><published>2013-05-05T00:00:00+02:00</published><updated>2013-05-05T00:00:00+02:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2013-05-05:/posts/photography-corsica.html</id><summary type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671551953132" title="Corsica"&gt;&lt;img src="https://c7.staticflickr.com/9/8841/28636957862_95a522b5e4_c.jpg" width="800" height="495" alt="Corsica"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</summary><content type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671551953132" title="Corsica"&gt;&lt;img src="https://c7.staticflickr.com/9/8841/28636957862_95a522b5e4_c.jpg" width="800" height="495" alt="Corsica"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</content><category term="Milkyway"></category><category term="Corsica"></category><category term="Photography"></category></entry><entry><title>Norway</title><link href="http://lcaraffa.net/posts/photography-norway.html" rel="alternate"></link><published>2013-05-05T00:00:00+02:00</published><updated>2013-05-05T00:00:00+02:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2013-05-05:/posts/photography-norway.html</id><summary type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671324805530" title="Norway"&gt;&lt;img src="https://c1.staticflickr.com/9/8611/28457847840_00592a9ba2_c.jpg" width="800" height="450" alt="Norway"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</summary><content type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671324805530" title="Norway"&gt;&lt;img src="https://c1.staticflickr.com/9/8611/28457847840_00592a9ba2_c.jpg" width="800" height="450" alt="Norway"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</content><category term="Norway"></category><category term="Photography"></category></entry><entry><title>Stereo Reconstruction and Contrast Restoration in Daytime Fog</title><link href="http://lcaraffa.net/posts/article-2012ACCV-stereo-fog.html" rel="alternate"></link><published>2012-11-11T00:00:00+01:00</published><updated>2012-11-11T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2012-11-11:/posts/article-2012ACCV-stereo-fog.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012ACCV-stereo-fog/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org8ce273c" class="outline-2"&gt;
+&lt;h2 id="org8ce273c"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8ce273c"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgb3d3221" class="outline-4"&gt;
+&lt;h4 id="orgb3d3221"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb3d3221"&gt;
+&lt;p&gt;
+Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. 
+Each year, this causes traffic accidents. 
+Fog is caused by a high concentration of very fine water droplets in the air. 
+When light hits these droplets, it is scattered and this results in a dense white …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012ACCV-stereo-fog/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org8ce273c" class="outline-2"&gt;
+&lt;h2 id="org8ce273c"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org8ce273c"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgb3d3221" class="outline-4"&gt;
+&lt;h4 id="orgb3d3221"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgb3d3221"&gt;
+&lt;p&gt;
+Fog reduces contrast and thus the visibility of vehicles and obstacles for drivers. 
+Each year, this causes traffic accidents. 
+Fog is caused by a high concentration of very fine water droplets in the air. 
+When light hits these droplets, it is scattered and this results in a dense white background, 
+called the atmospheric veil. As pointed in, Advanced Driver Assistance Systems (ADAS) based on the display 
+of defogged images from a camera may help the driver by improving objects visibility 
+in the image and thus may leads to a decrease of fatality and injury rates. 
+In the last few years, the problem of single image defogging has attracted attention in the image 
+processing community. Being an ill-posed problem, several methods have been proposed. 
+However, a few among of these methods are dedicated to the processing of road images. 
+One of the first exception is the method in ,  
+where a planar constraint is introduced to improve the restoration of the road area, 
+assuming an approximately flat road. The single image defogging problem being ill-posed, 
+the choice of the Bayesian approach seems adequate to set this problem as an inference problem. 
+A first Markov Random Field (MRF) approach of the problem has been proposed recently in. 
+However, this method is not dedicated to road images. 
+In this paper, we propose a novel MRF model of the single image 
+defogging problem which applies to all kinds of images but can also easily be 
+refined to obtain better results on road images using the planar constraint. 
+A comparative study and quantitative evaluation with several state-of-the-art algorithms is presented. 
+This evaluation demonstrates that the proposed MRF model allows 
+to derive a new algorithm which produces better quality results, in particular in case of a noisy input image. 
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org5e0f08f" class="outline-4"&gt;
+&lt;h4 id="org5e0f08f"&gt;PDF&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org5e0f08f"&gt;
+&lt;p&gt;
+&lt;a href="http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-accv12.pdf"&gt;http://perso.lcpc.fr/tarel.jean-philippe/publis/jpt-accv12.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgd2eb691" class="outline-4"&gt;
+&lt;h4 id="orgd2eb691"&gt;Bibtex&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgd2eb691"&gt;
+&lt;div class="org-src-container"&gt;
+&lt;pre class="src src-HTML"&gt;@inproceedings{
+   jpt-accv12, author = {Caraffa, L. and Tarel, J.-P.}, 
+   title = {Stereo Reconstruction and Contrast Restoration in Daytime Fog},
+   booktitle = {Proceedings of Asian Conference on Computer Vision (ACCV'12)},
+   address = {Daejeon, Korea}, volume = {IV}, pages = {13-25},
+   publisher = {Springer}, 
+   series = {LNCS}, 
+   number = {7727}, 
+   year = {2013}, 
+   note = {http://perso.lcpc.fr/tarel.jean-philippe/publis/accv12.html} }
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="Stereo reconstruction"></category><category term="fog"></category><category term="Bad Weather"></category><category term="Publication"></category></entry><entry><title>Bolivia and Chile</title><link href="http://lcaraffa.net/posts/photography-south-america.html" rel="alternate"></link><published>2012-05-05T00:00:00+02:00</published><updated>2012-05-05T00:00:00+02:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2012-05-05:/posts/photography-south-america.html</id><summary type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671324735190" title="South America"&gt;&lt;img src="https://c7.staticflickr.com/9/8296/28457838070_d586b820a6_c.jpg" width="800" height="400" alt="South America"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</summary><content type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671324735190" title="South America"&gt;&lt;img src="https://c7.staticflickr.com/9/8296/28457838070_d586b820a6_c.jpg" width="800" height="400" alt="South America"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</content><category term="Backpacking"></category><category term="Bolivia"></category><category term="Chile"></category><category term="Photography"></category></entry><entry><title>Mercantour and Nice</title><link href="http://lcaraffa.net/posts/photography-mercantour.html" rel="alternate"></link><published>2012-01-05T00:00:00+01:00</published><updated>2012-01-05T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2012-01-05:/posts/photography-mercantour.html</id><summary type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671585385531" title="Norway"&gt;&lt;img src="https://c1.staticflickr.com/9/8611/28457847840_00592a9ba2_c.jpg" width="800" height="450" alt="Norway"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</summary><content type="html">&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/112418160@N03/albums/72157671585385531" title="Norway"&gt;&lt;img src="https://c1.staticflickr.com/9/8611/28457847840_00592a9ba2_c.jpg" width="800" height="450" alt="Norway"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;
+</content><category term="Photography"></category></entry><entry><title>Vision Enhancement in Homogeneous and Heterogeneous Fog</title><link href="http://lcaraffa.net/posts/article-2012itsm-vision-hen.html" rel="alternate"></link><published>2012-01-01T00:00:00+01:00</published><updated>2012-01-01T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2012-01-01:/posts/article-2012itsm-vision-hen.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012itsm-vision-hen/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orge5cc0a7" class="outline-2"&gt;
+&lt;h2 id="orge5cc0a7"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge5cc0a7"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgc179ee2" class="outline-4"&gt;
+&lt;h4 id="orgc179ee2"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc179ee2"&gt;
+&lt;p&gt;
+One source of accidents when driving a vehicle
+is the presence of fog. Fog fades the colors and reduces the
+contrasts in the scene with respect to their distances from
+the driver. Various camera-based Advanced Driver Assistance
+Systems (ADAS) can be improved if efficient algorithms are
+designed for visibility …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../article-2012itsm-vision-hen/logo.png" alt="logo.png" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orge5cc0a7" class="outline-2"&gt;
+&lt;h2 id="orge5cc0a7"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-orge5cc0a7"&gt;
+&lt;/div&gt;&lt;div id="outline-container-orgc179ee2" class="outline-4"&gt;
+&lt;h4 id="orgc179ee2"&gt;Abstract&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgc179ee2"&gt;
+&lt;p&gt;
+One source of accidents when driving a vehicle
+is the presence of fog. Fog fades the colors and reduces the
+contrasts in the scene with respect to their distances from
+the driver. Various camera-based Advanced Driver Assistance
+Systems (ADAS) can be improved if efficient algorithms are
+designed for visibility enhancement in road images. The visibility
+enhancement algorithm proposed in &lt;sup&gt;&lt;a id="fnr.1" class="footref" href="#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt; is not optimized for road
+images. In this paper, we reformulate the problem as the inference
+of the local atmospheric veil from constraints. The algorithm
+in &lt;sup&gt;&lt;a id="fnr.1.100" class="footref" href="#fn.1"&gt;1&lt;/a&gt;&lt;/sup&gt; thus becomes a particular case. From this new derivation,
+we propose to better handle road images by introducing an extra
+constraint taking into account that a large part of the image can
+be assumed to be a planar road. The advantages of the proposed
+local algorithm are the speed, the possibility to handle both color
+and gray-level images, and the small number of parameters.
+A new scheme is proposed for rating visibility enhancement
+algorithms based on the addition of several types of generated
+fog on synthetic and camera images. A comparative study and
+quantitative evaluation with other state-of-the-art algorithms
+is thus proposed. This evaluation demonstrates that the new
+algorithm produces better results with homogeneous fog and that
+it is able to deal better with the presence of heterogeneous fog.
+Finally, we also propose a model allowing to evaluate the potential
+safety benefit of an ADAS based on the display of defogged
+images.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-orgfacb8f5" class="outline-4"&gt;
+&lt;h4 id="orgfacb8f5"&gt;PDF&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgfacb8f5"&gt;
+&lt;p&gt;
+&lt;a href="https://hal.archives-ouvertes.fr/file/index/docid/707039/filename/jpt-itsm12.pdf"&gt;https://hal.archives-ouvertes.fr/file/index/docid/707039/filename/jpt-itsm12.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="outline-container-orgaf4aa52" class="outline-4"&gt;
+&lt;h4 id="orgaf4aa52"&gt;Bibtex&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-orgaf4aa52"&gt;
+&lt;div class="org-src-container"&gt;
+&lt;pre class="src src-HTML"&gt;@article{jpt-itsm12, 
+	 author = {Tarel, J.-P. and Hautière, N. and Caraffa, L. and Cord, A. and Halmaoui, H. and Gruyer, D.}, 
+	 title = {Vision Enhancement in Homogeneous and Heterogeneous Fog}, 
+	 journal = {IEEE Intelligent Transportation Systems Magazine}, 
+	 volume = {4}, number = {2}, month = {Summer}, year = {2012}, pages = {6--20}, 
+	 publisher = {IEEE}, note = {http://perso.lcpc.fr/tarel.jean-philippe/publis/itsm12.html} }
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="footnotes"&gt;
+&lt;h4 class="footnotes"&gt;Footnotes: &lt;/h4&gt;
+&lt;div id="text-footnotes"&gt;
+
+&lt;div class="footdef"&gt;&lt;sup&gt;&lt;a id="fn.1" class="footnum" href="#fnr.1"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;div class="footpara"&gt;&lt;p class="footpara"&gt;
+Tarel, Jean-Philippe, and Nicolas Hautiere. "Fast visibility restoration from a single color or gray level image." 2009 IEEE 12th International Conference on Computer Vision. IEEE, 2009.
+&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+
+
+&lt;/div&gt;
+&lt;/div&gt;</content><category term="Computer science"></category><category term="Publication"></category><category term="Bad Weather"></category></entry><entry><title>Fast 3D convex hull based on 3D triangulation</title><link href="http://lcaraffa.net/posts/note-geom-algo.html" rel="alternate"></link><published>2010-01-05T00:00:00+01:00</published><updated>2010-01-05T00:00:00+01:00</updated><author><name>Laurent Caraffa</name></author><id>tag:lcaraffa.net,2010-01-05:/posts/note-geom-algo.html</id><summary type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-geom-algo/logo.jpg" alt="logo.jpg" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org266039e" class="outline-2"&gt;
+&lt;h2 id="org266039e"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org266039e"&gt;
+&lt;p&gt;
+The 3D triangulation algorithm of CGAL is highly efficient. Because the Convex hull is a subset of the 3D triangulation, the idea is to use the 3D triangulation to compute a new 3D convex hull algorithm. To this end, a greedy approach is used for maximizing the size of tetrahedra …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../note-geom-algo/logo.jpg" alt="logo.jpg" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id="outline-container-org266039e" class="outline-2"&gt;
+&lt;h2 id="org266039e"&gt;&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-org266039e"&gt;
+&lt;p&gt;
+The 3D triangulation algorithm of CGAL is highly efficient. Because the Convex hull is a subset of the 3D triangulation, the idea is to use the 3D triangulation to compute a new 3D convex hull algorithm. To this end, a greedy approach is used for maximizing the size of tetrahedra in the triangulation by choosing the order of insertion. Consequently, points which already appear inside the convex hull are not triangulated. 
+&lt;/p&gt;
+
+
+&lt;object style="border: medium none; overflow: hidden; width: 420px; height: 315px;" data="//www.youtube.com/embed/qgvtZtk7Zh8"&gt;                     
+&lt;/object&gt;   
+&lt;/div&gt;
+
+
+&lt;div id="outline-container-org99ce72c" class="outline-4"&gt;
+&lt;h4 id="org99ce72c"&gt;Softs :&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-org99ce72c"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="http://www.cgal.org/"&gt;CGAL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="CGAL"></category><category term="Convex hull"></category><category term="3D Delaunay"></category></entry></feed>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Convex hull - Laurent Caraffa</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <meta name="author" content="Laurent Caraffa" />
+    <meta name="keywords" content="Convex hull" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Laurent Caraffa" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Laurent Caraffa"/>
+        <meta property="og:url" content=".."/>
+        <meta property="og:description" content="Laurent Caraffa"/>
+
+	    
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">
+Laurent Caraffa            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <li><a href="https://lcaraffa.github.io/blog//category/blog_index.html">Blog</a></li>
+                    <li><a href="https://lcaraffa.github.io/blog//tag/publication.html">Publications</a></li>
+                    <li><a href="https://lcaraffa.github.io/blog//tag/source-code.html">Source code</a></li>
+                        <li >
+                            <a href="../category/computer-science.html">Computer science</a>
+                        </li>
+                        <li >
+                            <a href="../category/digital-art.html">Digital art</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("../banner.jpg");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<!-- <div class="copy"> -->
+		<!-- 	<h1>Laurent Caraffa</h1> -->
+		<!-- 	 -->
+		<!-- 		<p class="intro">Home page</p> -->
+		<!-- 	 -->
+		<!-- </div> -->
+	</div>
+</div><!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+<article>
+                <h1><a href="../posts/note-geom-algo.html">Fast 3D convex hull based on 3D triangulation</a></h1>
+                <div class="summary">
+<div class="figure">
+<p><img src="../note-geom-algo/logo.jpg" alt="logo.jpg" />
+</p>
+</div>
+
+<div id="outline-container-org266039e" class="outline-2">
+<h2 id="org266039e"></h2>
+<div class="outline-text-2" id="text-org266039e">
+<p>
+The 3D triangulation algorithm of CGAL is highly efficient. Because the Convex hull is a subset of the 3D triangulation, the idea is to use the 3D triangulation to compute a new 3D convex hull algorithm. To this end, a greedy approach is used for maximizing the size of tetrahedra …</p></div></div>
+                    <a class="btn btn-default btn-xs" href="../posts/note-geom-algo.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+
+  <p>
+    <img width="100%" class="img-thumbnail" src="./avatar.jpg" onerror="if (this.src != 'https://lcaraffa.github.io/blog//avatar2.jpg') this.src = 'https://lcaraffa.github.io/blog//avatar2.jpg';"/>
+        </p>
+    <p>
+        <strong>About Laurent Caraffa</strong><br/>
+        <font size="2">  I'm researcher in computer science at <a href="http://recherche.ign.fr/labos/matis/accueilMATIS.php">IGN</a>, Paris. Here you can find some information about my work and other area of interest.  <br> <b> Contact </b> <br>  mail : laurent.caraffa[at]ign.fr </font>
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://www.flickr.com/photos/112418160@N03/"><i class="fa fa-flickr fa-lg"></i> Flickr</a></li>
+                <li class="list-group-item"><a href="https://www.linkedin.com/in/laurentcaraffa"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+              </ul>
+            </li>
+
+
+
+            <li class="list-group-item"><a href="../tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group " id="tags">
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/publication.html">
+                            Publication
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/optimization.html">
+                            Optimization
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/computer-science.html">
+                            Computer science
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="../tag/photography.html">
+                            Photography
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/bad-weather.html">
+                            Bad Weather
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/graph-cut.html">
+                            Graph-cut
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/fog.html">
+                            Fog
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="../tag/qpbo.html">
+                            QPBO
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/photogrammetry.html">
+                            Photogrammetry
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/visibility-distance.html">
+                            Visibility distance
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/alpha-expansion.html">
+                            Alpha-expansion
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/lidar.html">
+                            Lidar
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/stereo-vision.html">
+                            Stereo vision
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/micmac.html">
+                            Micmac
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="../tag/blender.html">
+                            Blender
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="https://scholar.google.fr/citations?user=N0YTGr8AAAAJ&hl=fr" target="_blank">
+                Google Scholar
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">; 2010 Laurent Caraffa
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>,
+	    <a href="http://orgmode.org/" target="_blank">Orgmode</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+    <script src="../theme/js/jquery.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="../theme/js/respond.min.js"></script>
+    
+    <script type="text/javascript" async
+	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="../theme/js/bodypadding.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-16886766-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+</body>
+</html>
